@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCS Task Allocation System</title>
+    
+    <!-- Add Tailwind CSS if you're using it -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Or link to your compiled CSS -->
+    <!-- <link rel="stylesheet" href="/src/index.css" /> -->
+    
+    <!-- Optional: Add some custom styles for your job allocation system -->
+    <style>
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: #f8fafc;
+      }
+      
+      /* Custom styles for your task allocation components */
+      .tile-item {
+        @apply bg-gray-50 border-l-4 border-blue-500 p-4 mb-3 rounded-r-md;
+      }
+      
+      .user-item {
+        @apply px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-100;
+      }
+      
+      .status-pending {
+        @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs;
+      }
+      
+      .status-assigned {
+        @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- React app will mount here -->
+    <div id="root"></div>
+    
+    <!-- Your main React app entry point -->
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Optional: Add any global scripts needed for your task allocation -->
+    <script>
+      // Global configuration for your TCS Task Allocation System
+      window.APP_CONFIG = {
+        name: 'TCS Task Allocation System',
+        version: '1.0.0',
+        supabaseUrl: '', // Will be loaded from environment
+        features: {
+          csvUpload: true,
+          userSearch: true,
+          tileAllocation: true,
+          realTimeUpdates: true
+        }
+      };
+    </script>
+  </body>
+</html>
